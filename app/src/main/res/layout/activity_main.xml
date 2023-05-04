@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/hintergrundfarbe">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/himmelblau"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ayumiapplogo3" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/relativeLayoutMittag"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayoutMittag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent">
+        <Spinner
+            android:id="@+id/daySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/tv_border"
+            android:text=" MO "
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="364dp" />
+
+        <TextView
+            android:id="@+id/textViewMorgens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginBottom="40dp"
+            android:layout_toEndOf="@+id/daySpinner"
+            android:background="@drawable/tv_border"
+            android:text=" Morgens "
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-4dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/textViewMorgens"
+            android:button="@drawable/checkbox_size"
+            android:buttonTint="@color/ayupink"
+            android:checked="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutMittag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar">
+
+        <Spinner
+            android:id="@+id/daySpinner2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/tv_border"
+            android:text=" MO "
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="364dp" />
+        <TextView
+            android:id="@+id/textViewMittags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="106dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/tv_border"
+            android:text=" Mittags "
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/textViewMittags"
+            android:button="@drawable/checkbox_size"
+            android:buttonTint="@color/ayupink"
+            android:checked="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutAbends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutMittag"
+        app:layout_constraintVertical_bias="0.0">
+        <Spinner
+            android:id="@+id/daySpinner3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/tv_border"
+            android:text=" MO "
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="364dp" />
+
+        <TextView
+            android:id="@+id/textViewAbends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/tv_border"
+            android:text=" Abends "
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/textViewAbends"
+            android:button="@drawable/checkbox_size"
+            android:buttonTint="@color/ayupink"
+            android:checked="false" />
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
